@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FAFAFA;
+  --bg-alt: #F5F5F0;
+  --card: #FFFFFF;
+  --text: #18181B;
+  --text-sec: #52525B;
+  --text-muted: #A1A1AA;
+  --accent: #F97316;
+  --accent-hover: #EA580C;
+  --accent-light: #FFF7ED;
+  --border: #E4E4E7;
+  --success: #22C55E;
+  --font-heading: var(--font-heading), system-ui, sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ===== UTILITIES ===== */
+.container-lg {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ===== BENTO CARD ===== */
+.bento-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== TAG PILLS ===== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.tag-ia { background: #FFF7ED; color: #EA580C; }
+.tag-business { background: #EFF6FF; color: #2563EB; }
+.tag-logiciel { background: #F0FDF4; color: #16A34A; }
+.tag-guide { background: #FAF5FF; color: #9333EA; }
+.tag-comparatif { background: #FFFBEB; color: #D97706; }
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ===== VERDICT BOX ===== */
+.verdict-box {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+/* ===== NEWSLETTER CTA ===== */
+.newsletter-cta {
+  background: linear-gradient(135deg, #18181B 0%, #27272A 100%);
+  border-radius: 20px;
+  padding: 48px;
+  color: white;
+  text-align: center;
+}
+
+/* ===== SECTION ===== */
+.section {
+  padding: 64px 0;
+}
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.section-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
